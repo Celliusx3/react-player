@@ -13,7 +13,7 @@ import HomeScreen from './screens/HomeScreen';
 
 function App() {
   return (
-    <Router>
+    <Router basename={window.location.pathname || ''}>
       <Switch>
         <Route exact path="/">
           <HomeScreen/>

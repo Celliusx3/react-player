@@ -31,28 +31,9 @@ export default function HomeScreen() {
 
   let history = useHistory();
 
-
   const classes = useStyles();
   const [list, setList] = useState([]);
   const [title, setTitle] = useState("看戏吧");
-
-  const renderList = () =>  {
-    return (
-      <div className={classes.root}>
-        <Grid container spacing={1}>
-          { list!= null ? list.map((value,index) => {
-            return (
-              <Grid key={value.vid} item xs={1}>
-                <Paper onClick={() =>  {history.push(`/details/${value.vid}`)}} variant="outlined" className={`${classes.paper}`}>
-                  {value.name}
-                </Paper>
-              </Grid>
-            )
-          }): <div></div>}
-        </Grid>
-      </div>
-    )
-  }
 
   return (
     <div>
